@@ -1,0 +1,21 @@
+<h1>Questions#answer</h1>
+<div>
+  <p><%= @question %></p>
+  <p>Your question</p>
+</div>
+
+<br>
+<br>
+
+<div>
+  <% if @question == "I am going to work" %>
+    <p><%= "Great!" %></p>
+  <% elsif @question.include? "?" %>
+    <p><%= "Silly question, get dressed and go to work!" %></p>
+  <% else %>
+    <p><%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+  <p>Coach's answer</p>
+</div>
+
+<%= link_to "Ask a new question", ask_path %>
